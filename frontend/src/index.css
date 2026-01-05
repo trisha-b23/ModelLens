@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100vw;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(14px, 1.1vw, 18px);
+  background-color: transparent;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  width: 60vw;
+  height: 60vw;
+  border-radius: 50%;
+  filter: blur(8vw);
+  opacity: 0.6;
+  z-index: -1;
+}
+
+body::before {
+  top: -20vw;
+  left: -20vw;
+  background: radial-gradient(
+    circle,
+    #bad29c 0%,
+    rgba(143, 202, 212, 0.6) 30%,
+    transparent 70%
+  );
+}
+
+body::after {
+  bottom: -25vw;
+  right: -20vw;
+  background: radial-gradient(
+    circle,
+    #809e7e 0%,
+    rgba(173, 211, 172, 0.6) 30%,
+    transparent 70%
+  );
+}
+
+.app-container {
+  background-color: rgba(228, 232, 224, 0.35);
+  display: flex;
+  flex-direction: column;
+  width: 100vw; 
+}
+
+.app-header {
+  width: 100vw;           
+  padding: 6vh 0vw;       
+  color: white;
+  text-align: center;
+  box-shadow: 0 0.5vh 1vh rgba(0,0,0,0.1);
+   background: linear-gradient(
+    to right,
+    #10464f,
+    #749d72
+  );
+  box-shadow: 0 0.25rem 1.5rem rgba(0, 0, 0, 0.35);
+  border-bottom: 0.7vw solid rgba(255, 255, 255, 0.08);
+}
+
+.app-header h1 {
+  font-size: 4vw;        
+}
+
+.app-main {
+  flex: 1;                
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;    
+  width: 100vw;           
+  padding: 5vw;           
+}
+
+.content-wrapper {
+  width: 80vw;            
+  text-align: center;
+}
+
+header img {
+  height: 4rem;
+}

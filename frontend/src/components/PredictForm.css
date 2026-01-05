@@ -1,0 +1,59 @@
+.predict-card {
+  padding: 5vw;
+  border-radius: 2vw;
+  background: rgba(255, 255, 255, 0.80);
+  width: 63vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  box-sizing: border-box;
+  box-shadow:
+    0 1.5rem 3rem rgba(0, 0, 0, 0.12),
+    inset 0 0.0625rem 0 rgba(255, 255, 255, 0.6);
+}
+
+.predict-card h2 {
+  margin-bottom: 2vh;
+  font-size: 2rem;
+  color: #644869;
+}
+
+.predict-card label {
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vh;
+}
+
+.predict-card input[type="number"] {
+  margin-bottom: 2vh;
+  font-size: 1.5rem;
+  padding: 0.5vh 0.5vw;
+  border-radius: 1vw;
+  border: 1px solid #ccc;
+  width: 90%;
+}
+
+.predict-card button {
+  background-color: #90b9ab;
+  margin-top: 1vw;
+  color: white;
+  border: none;
+  padding: 1vh 2vw;
+  border-radius: 1vw;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.5rem;
+  transition: background-color 0.3s;
+}
+
+.predict-card button:hover {
+  background-color: #50817d;
+}
+
+.prediction-message, .prediction-error, .prediction-notice {
+  margin-top: 2vh;
+  font-weight: bold;
+  color: #846291;
+  font-size: 1.5rem;
+}
