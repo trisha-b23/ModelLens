@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import "./PredictForm.css";
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
 export default function PredictForm({ columns, targetColumn, isTrained }) {
   const featureColumns = columns.filter(col => col !== targetColumn);
@@ -23,7 +24,7 @@ export default function PredictForm({ columns, targetColumn, isTrained }) {
     }
 
     try {
-      const res = await axios.post("http://localhost:8000/predict", { features });
+      const res = await axios.post(`${backendUrl}/predict`, { features });
       setPrediction(res.data);
     } catch (err) {
       setError("Prediction failed.");

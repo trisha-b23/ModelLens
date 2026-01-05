@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./UploadForm.css"; 
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
 const UploadForm = ({setColumns}) => {
   const [file, setFile] = useState(null);
@@ -21,7 +22,7 @@ const UploadForm = ({setColumns}) => {
     formData.append("file", file);
 
     try {
-      const response = await axios.post("http://localhost:8000/upload", formData, {
+      const response = await axios.post(`${backendUrl}/upload`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },

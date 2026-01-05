@@ -17,7 +17,7 @@ trained_model_type = None
 model_mse = None
 
 origins = [
-    "http://localhost:5173", 
+    "http://localhost:5173", "https://modellens.onrender.com" 
 ]
 
 app.add_middleware(

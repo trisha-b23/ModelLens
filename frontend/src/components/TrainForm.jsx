@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import "./TrainForm.css";
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
 export default function TrainForm({ columns, setIsTrained, setTargetColumn }) {
   const [selectedTarget, setSelectedTargetLocal] = useState(columns[0] || ""); 
@@ -11,7 +12,7 @@ export default function TrainForm({ columns, setIsTrained, setTargetColumn }) {
     if (!selectedTarget) return;
 
     try {
-      const res = await axios.post("http://localhost:8000/train", {
+      const res = await axios.post(`${backendUrl}/train`, {
         target_column: selectedTarget,
         model_type: modelType,
       });
