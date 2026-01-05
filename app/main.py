@@ -17,7 +17,7 @@ trained_model_type = None
 model_mse = None
 
 origins = [
-    "http://localhost:5173", "https://modellens.onrender.com" 
+    "http://localhost:5173", "https://model-lens-one.vercel.app" 
 ]
 
 app.add_middleware(
